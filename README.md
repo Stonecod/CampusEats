@@ -1,4 +1,4 @@
-CampusEats 🍔🎓
+CampusEats
 
 CampusEats is a responsive landing page concept for a student-focused food delivery service.
 It’s designed to connect university students with nearby restaurants and vendors for fast, affordable campus delivery.
@@ -33,6 +33,4 @@ Purpose :
 
 I built this project to practice creating a realistic landing page and to strengthen my understanding of responsive design, layout systems, and clean semantic HTML.
 
-Live demo
-
-Coming soon (GitHub Pages).
+Live demo: https://stonecod.github.io/CampusEats/
