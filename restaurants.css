@@ -155,6 +155,28 @@ body {
 }
 
 
+
+
+.menu-dropdown {
+  display: none;
+  margin-top: 1rem;
+  border-top: 1px solid #e5e7eb;
+  padding-top: 0.5rem;
+}
+
+.menu-dropdown.active {
+  display: block;
+}
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.4rem 0;
+  font-size: 0.95rem;
+}
+
+
+
 /* Mobile */
 @media (max-width: 600px) {
   .search-bar {

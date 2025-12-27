@@ -29,3 +29,17 @@ function filterRestaurants() {
 
 searchInput.addEventListener("input", filterRestaurants);
 filterSelect.addEventListener("change", filterRestaurants);
+
+document.addEventListener("DOMContentLoaded", () => {
+  const menuButtons = document.querySelectorAll(".view-menu");
+
+  menuButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      const card = button.closest(".restaurant-card");
+      const dropdown = card.querySelector(".menu-dropdown");
+
+      dropdown.classList.toggle("active");
+    });
+  });
+});
+
