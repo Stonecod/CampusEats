@@ -1,3 +1,7 @@
+/* ===============================
+   SEARCH & FILTER RESTAURANTS
+================================ */
+
 const searchInput = document.querySelector(".search-bar input");
 const filterSelect = document.querySelector(".search-bar select");
 const cards = document.querySelectorAll(".restaurant-card");
@@ -15,9 +19,8 @@ function filterRestaurants() {
     const matchesFilter =
       filterValue === "all" || tags.includes(filterValue);
 
-    card.style.display = (matchesSearch && matchesFilter)
-      ? "block"
-      : "none";
+    card.style.display =
+      matchesSearch && matchesFilter ? "block" : "none";
   });
 
   const visibleCards = Array.from(cards).some(
@@ -30,16 +33,15 @@ function filterRestaurants() {
 searchInput.addEventListener("input", filterRestaurants);
 filterSelect.addEventListener("change", filterRestaurants);
 
-document.addEventListener("DOMContentLoaded", () => {
-  const menuButtons = document.querySelectorAll(".view-menu");
+/* ===============================
+   MENU DROPDOWN TOGGLE
+================================ */
 
-  menuButtons.forEach(button => {
-    button.addEventListener("click", () => {
-      const card = button.closest(".restaurant-card");
-      const dropdown = card.querySelector(".menu-dropdown");
+const viewMenuButtons = document.querySelectorAll(".view-menu");
 
-      dropdown.classList.toggle("active");
-    });
+viewMenuButtons.forEach(button => {
+  button.addEventListener("click", () => {
+    const dropdown = button.nextElementSibling;
+    dropdown.classList.toggle("active");
   });
 });
-
